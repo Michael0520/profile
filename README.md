@@ -22,19 +22,6 @@ Nuxt Blog built with [Nuxt3](https://nuxt.com), [Nuxt-Content2](https://content.
 - Server Side Rendered(SSR) with Nuxt3
 - RSS feed
 
-## How to Make This Blog Template Yours in 5 Minutes
-
-- Clone this repo or use it as a template
-- Go to ./data/index.ts file & add your personal info
-- Then head over to the ./content/blogs folder to add new blogs
-- Voilà! You've got a personalized blog site!
-
-## Preview
-
-## Demo
-
-> Hosted on [Vercel](https://vercel.com/): `npm run build`
-
 ## Build Setup
 
 **Requires Node.js 16+**
@@ -52,4 +39,3 @@ pnpm run build
 # serve in production mode
 pnpm run preview
 ```
-# test

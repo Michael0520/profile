@@ -7,7 +7,7 @@ import { categoryPage } from '~/data'
     <div class="grid grid-cols-1 sm:grid-cols-2 items-center">
       <div class="px-6">
         <h1
-          class="text-black dark:text-zinc-300 font-semibold leading-tight text-4xl md:text-5xl my-5"
+          class="text-[#3F4AE8] dark:text-[#6871e9] font-semibold leading-tight text-4xl md:text-5xl my-5"
         >
           {{ categoryPage.title }}
         </h1>

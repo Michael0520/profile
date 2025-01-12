@@ -13,9 +13,9 @@ export const footerData = {
 }
 
 export const homePage = {
-  title: 'Welcome To My Blog Site',
+  title: 'Michael Lo',
   description:
-    'Get Web Development, Javascript, Typescript, React/VueJs, Next/Nuxt, Related Articles, Tips, Learning resources and more.',
+    'A Software Engineer. Get Web Development, Javascript, Typescript, React/VueJs, Next/Nuxt, Related Articles, Tips, Learning resources and more.',
 }
 
 export const blogsPage = {

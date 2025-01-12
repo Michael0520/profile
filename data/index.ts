@@ -50,9 +50,9 @@ export const seoData = {
 
 export const socialLinks = {
   githubLink: 'https://github.com/Michael0520',
-  // linkedinLink: '',
+  instagramLink: 'https://www.instagram.com/michael0520/',
   twitterLink: 'https://twitter.com/MichaelLo860520',
-  // stackoverflowLink: '',
+  ghostWebSiteLink: 'https://michael-lo.ghost.io/',
 }
 
 export const siteMetaData = [
@@ -99,3 +99,8 @@ export const siteMetaData = [
     content: seoData.image,
   },
 ]
+
+export const copyright = {
+  year: new Date().getFullYear(),
+  company: 'Ming Tech Software, Inc'
+}

@@ -20,14 +20,14 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <header>
-    <h1 class="text-xl dark:text-zinc-300 md:text-3xl lg:text-4xl m-7 font-bold text-center">
+    <h1 class="text-xl dark:text-zinc-300 md:text-3xl lg:text-4xl my-7 font-bold text-left">
       {{ title || '' }}
     </h1>
     <NuxtImg
       :src="image || ''"
       :alt="alt || ''"
       width="600"
-      class="m-auto rounded-2xl shadow-lg h-32 md:h-72 w-4/6 md:w-4/5 content-center object-cover"
+      class="m-auto rounded-2xl shadow-lg aspect-video w-full content-center object-cover"
     />
     <p
       class="text-xs sm:text-sm my-3 max-w-xl mx-auto text-center text-zinc-600 dark:text-zinc-400"

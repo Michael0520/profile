@@ -1,36 +1,51 @@
 <script setup lang="ts">
-const route = useRoute()
-
-const path = computed(() => route.fullPath.replace('/', ''))
+import { aboutPage, socialLinks, copyright } from '~/data'
 </script>
 
 <template>
-  <div class="py-5 border-t dark:border-gray-800 mt-5 text-zinc-700 dark:text-zinc-300">
+  <footer class="py-5 border-t dark:borqder-gray-800 mt-5 text-zinc-700 dark:text-zinc-300">
     <div class="px-6 container max-w-5xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3">
-        <FooterSite v-if="path === 'about'" />
-        <FooterDeveloper v-else />
-        <FooterLink />
-        <FooterConnect />
-      </div>
+      <div class="mx-auto w-full max-w-screen-xl xl:pb-2">
+        <div class="md:flex md:justify-between px-8 p-4 py-16 sm:pb-16 gap-4">
+          <!-- Company Info -->
+          <div class="mb-12 flex-col flex gap-4">
+            <NuxtLink class="flex items-center gap-2" :href="socialLinks.ghostWebSiteLink" target="_blank" aria-label="Ghost">
+                <NuxtImg src="/brand.jpg" width="40" height="40" quality="50" class="rounded-md" />
+              <span class="jsx-d89dd47fba53c125"> </span>
+            </NuxtLink>
+            <p class="max-w-xs">{{ aboutPage.description }}</p>
+          </div>
 
-      <div class="border-t dark:border-gray-800 mt-5 text-center p-2">
-        © 2020-2024 No Right is reserved. Who cares 🤷‍♂️? It's
-        <a href="https://github.com/Michael0520" target="_blank" rel="nofollow" class="underline"
-          >open source</a
-        >
-        anyway.
+          <!-- Links Groups -->
+          <div class="grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-1">
+            <FooterLinkGroup title="Community" />
+          </div>
+        </div>
 
-        <a href="/rss.xml" aria-label="Website RSS Feed">
-          <span class="px-3"><Icon name="bi:rss-fill" /></span
-        ></a>
+        <!-- Footer Bottom -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between rounded-md py-4 px-8 gap-2">
+          <div class="flex space-x-5 sm:justify-center sm:mt-0">
+            <a
+class="text-gray-500 hover:text-gray-900 dark:hover:text-gray-600 fill-gray-500 hover:fill-gray-900 dark:hover:fill-gray-600"
+              href="https://michael-lo.ghost.io/">
+
+
+              <span class="sr-only">Github</span>
+            </a>
+
+          </div>
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            Copyright © {{ copyright.year }}
+            <a class="cursor-pointer" href="/">{{ copyright.company }}</a>. All Rights
+            Reserved.
+          </span>
+        </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <style>
-/* we will explain what these classes do next! */
 .v-enter-active,
 .v-leave-active {
   transition: all 0.4s;

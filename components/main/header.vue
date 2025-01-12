@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { navbarData } from '../../data'
-
 const colorMode = useColorMode()
 function onClick(val: string) {
   colorMode.preference = val
@@ -14,11 +12,11 @@ function isActive(path: string) {
 
 <template>
   <div class="py-5 border-b dark:border-gray-800 font-semibold">
-    <div class="flex px-6 container max-w-5xl justify-between mx-auto items-baseline">
-      <ul class="flex items-baseline space-x-5">
+    <div class="flex px-6 container max-w-5xl justify-between mx-auto items-center">
+      <ul class="flex items-center space-x-5">
         <li class="text-base sm:text-2xl font-bold">
           <NuxtLink to="/" :class="{ underline: $route.path === '/' }">
-            {{ navbarData.homeTitle }}
+            <NuxtImg src="/brand.jpg" width="40" height="40" quality="50" class="rounded-md" />
           </NuxtLink>
         </li>
       </ul>

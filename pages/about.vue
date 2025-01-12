@@ -39,12 +39,12 @@ defineOgImageComponent('About', {
                 <Icon name="fa:github" size="1em" />
               </NuxtLink>
               <NuxtLink
-                :to="socialLinks.linkedinLink"
+                :to="socialLinks.instagramLink"
                 target="_blank"
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
-                aria-label="LinkedIn"
+                aria-label="Instagram"
               >
-                <Icon name="fa:linkedin-square" size="1em" />
+                <Icon name="fa:instagram" size="1em" />
               </NuxtLink>
               <NuxtLink
                 :to="socialLinks.twitterLink"
@@ -55,12 +55,12 @@ defineOgImageComponent('About', {
                 <Icon name="fa:twitter-square" size="1em" />
               </NuxtLink>
               <NuxtLink
-                :to="socialLinks.stackoverflowLink"
+                :to="socialLinks.ghostWebSiteLink"
                 target="_blank"
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
-                aria-label="StackOverflow"
+                aria-label="Ghost"
               >
-                <Icon name="fa:stack-overflow" size="1em" />
+                <Icon name="fa:globe" size="1em" />
               </NuxtLink>
             </div>
           </div>

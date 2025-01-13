@@ -39,7 +39,7 @@ export const aboutPage = {
 export const seoData = {
   title: `Ming's Blog`,
   ogTitle: `Let's learn Javascript, Typescript, React/VueJs, Next/Nuxt, & Problem Solving - Ming's Blog`,
-  description: `Hi I am Michael Lo. A Software Engineer at AppsCode, with over 2.5+ years experience in software development.`,
+  description: `Hi I am Michael Lo. A Software Engineer in Taiwan, with over 2.5+ years experience in software development.`,
   twitterDescription: `Ming's Blog, where I play around with Nuxt, Vue, and more and showcase my blog, resources, etc.`,
   image:
     'https://michael-lo.ghost.io/content/images/2025/01/white-ig-logo.svg',

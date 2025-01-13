@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { blogsPage } from '~/data'
+import { blogsPage } from "~/data"
 </script>
 
 <template>
@@ -19,7 +19,6 @@ import { blogsPage } from '~/data'
         <!-- <LogoDogpow /> -->
         <!-- <img src="~/assets/images/logo.jpg" alt="dog" /> -->
         <NuxtImg src="/logo.jpg" width="450" height="500" quality="50" class="rounded-md" />
-
       </div>
     </div>
   </div>

@@ -1,9 +1,9 @@
 <script setup>
-import { siteMetaData } from './data'
+import { siteMetaData } from "./data"
 
 useHead({
   htmlAttrs: {
-    lang: 'en',
+    lang: "en",
   },
   meta: () => siteMetaData,
 })

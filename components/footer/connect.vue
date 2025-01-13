@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { footerData, seoData } from '~/data'
+import { footerData, seoData } from "~/data"
 </script>
 
 <template>

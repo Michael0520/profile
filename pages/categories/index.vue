@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { makeFirstCharUpper } from '@/utils/helper'
+import { makeFirstCharUpper } from "@/utils/helper"
 
-const { data } = await useAsyncData('all-blog-post-for-category', () =>
-  queryContent('/blogs').sort({ _id: -1 }).find(),
+const { data } = await useAsyncData("all-blog-post-for-category", () =>
+  queryContent("/blogs").sort({ _id: -1 }).find(),
 )
 
 const allTags = new Map()
@@ -20,12 +20,12 @@ data.value?.forEach((blog) => {
 })
 
 useHead({
-  title: 'Categories',
+  title: "Categories",
   meta: [
     {
-      name: 'description',
+      name: "description",
       content:
-        'Below All the topics are listed on which either I have written a blog or will write a blog in near future.',
+        "Below All the topics are listed on which either I have written a blog or will write a blog in near future.",
     },
   ],
 })
@@ -34,9 +34,9 @@ useHead({
 const siteData = useSiteConfig()
 defineOgImage({
   props: {
-    title: 'Categories',
+    title: "Categories",
     description:
-      'Below All the topics are listed on which either I have written a blog or will write a blog in near future.',
+      "Below All the topics are listed on which either I have written a blog or will write a blog in near future.",
     siteName: siteData.url,
   },
 })

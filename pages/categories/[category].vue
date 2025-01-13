@@ -3,16 +3,16 @@ const route = useRoute()
 
 // take category from route params & make first char upper
 const category = computed(() => {
-  const name = route.params.category || ''
-  let strName = ''
+  const name = route.params.category || ""
+  let strName = ""
 
-  if (Array.isArray(name)) strName = name.at(0) || ''
+  if (Array.isArray(name)) strName = name.at(0) || ""
   else strName = name
   return strName
 })
 
 const { data } = await useAsyncData(`category-data-${category.value}`, () =>
-  queryContent('/blogs')
+  queryContent("/blogs")
     .where({ tags: { $contains: category.value } })
     .find(),
 )
@@ -21,12 +21,12 @@ const formattedData = computed(() => {
   return data.value?.map((articles) => {
     return {
       path: articles._path,
-      title: articles.title || 'no-title available',
-      description: articles.description || 'no-description available',
-      image: articles.image || '/blogs-img/blog.jpg',
-      alt: articles.alt || 'no alter data available',
-      ogImage: articles.ogImage || '/blogs-img/blog.jpg',
-      date: articles.date || 'not-date-available',
+      title: articles.title || "no-title available",
+      description: articles.description || "no-description available",
+      image: articles.image || "/blogs-img/blog.jpg",
+      alt: articles.alt || "no alter data available",
+      ogImage: articles.ogImage || "/blogs-img/blog.jpg",
+      date: articles.date || "not-date-available",
       tags: articles.tags || [],
       published: articles.published || false,
     }
@@ -37,7 +37,7 @@ useHead({
   title: category.value,
   meta: [
     {
-      name: 'description',
+      name: "description",
       content: `You will find all the ${category.value} related post here`,
     },
   ],

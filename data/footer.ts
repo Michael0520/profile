@@ -1,11 +1,11 @@
 export const footerLinks = {
   community: {
-    title: 'Community',
+    title: "Community",
     links: [
-      { name: 'Discord', href: '/chat' },
-      { name: 'Twitter', href: 'https://twitter.com/milliondotjs' },
-      { name: 'Email', href: 'mailto:aiden@million.dev' }
-    ]
+      { name: "Discord", href: "/chat" },
+      { name: "Twitter", href: "https://twitter.com/milliondotjs" },
+      { name: "Email", href: "mailto:aiden@million.dev" },
+    ],
   },
   // legal: {
   //   title: 'Legal',
@@ -18,9 +18,9 @@ export const footerLinks = {
 }
 
 export const companyInfo = {
-  description: 'Identify and fix slow code–in minutes, not months.',
+  description: "Identify and fix slow code–in minutes, not months.",
   copyright: {
     year: new Date().getFullYear(),
-    company: 'Ming Tech Software, Inc'
-  }
+    company: "Ming Tech Software, Inc",
+  },
 }

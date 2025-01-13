@@ -1,23 +1,23 @@
 <script lang="ts" setup>
-import { navbarData } from '~/data/index'
+import { navbarData } from "~/data/index"
 
 useHead({
-  title: 'Home',
+  title: "Home",
   meta: [
     {
-      name: 'description',
+      name: "description",
       content:
-        'Welcome To My Blog Site. Get Web Development, Javascript, Typescript, NodeJs, Vue, and Nuxt, Related Articles, Tips, Learning resources and more.',
+        "Welcome To My Blog Site. Get Web Development, Javascript, Typescript, NodeJs, Vue, and Nuxt, Related Articles, Tips, Learning resources and more.",
     },
   ],
 })
 
 // Generate OG Image
-defineOgImageComponent('About', {
-  headline: 'Greetings 👋',
+defineOgImageComponent("About", {
+  headline: "Greetings 👋",
   title: navbarData.homeTitle,
-  description: 'Dive into web development with me and learn Js, Ts, Vue, Nuxt, Docker, k8s',
-  link: '/logo.jpg',
+  description: "Dive into web development with me and learn Js, Ts, Vue, Nuxt, Docker, k8s",
+  link: "/logo.jpg",
 })
 </script>
 

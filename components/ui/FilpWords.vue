@@ -1,9 +1,6 @@
 <template>
   <div class="relative inline-block px-2">
-    <Transition
-      @after-enter="$emit('animationStart')"
-      @after-leave="$emit('animationComplete')"
-    >
+    <Transition @after-enter="$emit('animationStart')" @after-leave="$emit('animationComplete')">
       <div
         v-show="isVisible"
         :class="[
@@ -11,10 +8,7 @@
           props.class,
         ]"
       >
-        <template
-          v-for="(wordObj, wordIndex) in splitWords"
-          :key="wordObj.word + wordIndex"
-        >
+        <template v-for="(wordObj, wordIndex) in splitWords" :key="wordObj.word + wordIndex">
           <span
             class="inline-block whitespace-nowrap opacity-0"
             :style="{
@@ -43,61 +37,61 @@
 
 <script setup lang="ts">
 interface Props {
-  words: string[];
-  duration?: number;
-  class?: string;
+  words: string[]
+  duration?: number
+  class?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   duration: 3000,
   class: "",
-});
+})
 
-defineEmits(["animationStart", "animationComplete"]);
+defineEmits(["animationStart", "animationComplete"])
 
-const currentWord = ref(props.words[0]);
-const isVisible = ref(true);
-const timeoutId = ref<number | null>(null);
+const currentWord = ref(props.words[0])
+const isVisible = ref(true)
+const timeoutId = ref<number | null>(null)
 
 function startAnimation() {
-  isVisible.value = false;
+  isVisible.value = false
 
   setTimeout(() => {
-    const currentIndex = props.words.indexOf(currentWord.value);
-    const nextWord = props.words[currentIndex + 1] || props.words[0];
-    currentWord.value = nextWord;
-    isVisible.value = true;
-  }, 600);
+    const currentIndex = props.words.indexOf(currentWord.value)
+    const nextWord = props.words[currentIndex + 1] || props.words[0]
+    currentWord.value = nextWord
+    isVisible.value = true
+  }, 600)
 }
 
 const splitWords = computed(() => {
   return currentWord.value.split(" ").map((word) => ({
     word,
     letters: word.split(""),
-  }));
-});
+  }))
+})
 
 function startTimeout() {
   timeoutId.value = window.setTimeout(() => {
-    startAnimation();
-  }, props.duration);
+    startAnimation()
+  }, props.duration)
 }
 
 onMounted(() => {
-  startTimeout();
-});
+  startTimeout()
+})
 
 onBeforeUnmount(() => {
   if (timeoutId.value) {
-    clearTimeout(timeoutId.value);
+    clearTimeout(timeoutId.value)
   }
-});
+})
 
 watch(isVisible, (newValue) => {
   if (newValue) {
-    startTimeout();
+    startTimeout()
   }
-});
+})
 </script>
 
 <style>

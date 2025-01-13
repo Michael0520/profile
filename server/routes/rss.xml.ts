@@ -1,22 +1,22 @@
-import { Feed } from 'feed'
-import { serverQueryContent } from '#content/server'
+import { Feed } from "feed"
+import { serverQueryContent } from "#content/server"
 
-const basePath = 'https://michael-lo.ghost.io'
+const basePath = "https://michael-lo.ghost.io"
 
 export default defineEventHandler(async (event) => {
-  setHeader(event, 'content-type', 'text/xml')
+  setHeader(event, "content-type", "text/xml")
   const docs = await serverQueryContent(event).sort({ date: -1 }).find()
   const feed = new Feed({
     title: "Ming's personal blog site",
     description: "Ming's personal blog site",
     id: basePath,
     link: basePath,
-    language: 'en',
+    language: "en",
     favicon: `${basePath}/favicon.ico`,
-    copyright: 'MIT',
+    copyright: "MIT",
     author: {
-      name: 'Michael Lo',
-      email: 'michael860520@gmail.com',
+      name: "Michael Lo",
+      email: "michael860520@gmail.com",
       link: basePath,
     },
   })
@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
   // Add the feed items
   docs.forEach((doc) => {
     feed.addItem({
-      title: doc.title || '',
+      title: doc.title || "",
       id: basePath + doc._path,
       link: basePath + doc._path,
       description: doc.description,

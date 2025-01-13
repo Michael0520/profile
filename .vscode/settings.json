@@ -11,12 +11,5 @@
     "**/.svn/**",
     "**/.nuxt/**"
   ],
-  "cSpell.words": [
-    "cloudinary",
-    "Namecheap",
-    "Nuxt",
-    "spacegrotesk",
-    "Tailwindcss",
-    "vuex"
-  ]
+  "cSpell.words": ["cloudinary", "Namecheap", "Nuxt", "spacegrotesk", "Tailwindcss", "vuex"]
 }

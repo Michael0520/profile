@@ -1,19 +1,19 @@
 <script lang="ts" setup>
 // Get Last 6 Publish Post from the content/blog directory
-const { data } = await useAsyncData('trending-post', () =>
-  queryContent('/blogs').limit(3).sort({ _id: 1 }).find(),
+const { data } = await useAsyncData("trending-post", () =>
+  queryContent("/blogs").limit(3).sort({ _id: 1 }).find(),
 )
 
 const formattedData = computed(() => {
   return data.value?.map((articles) => {
     return {
       path: articles._path,
-      title: articles.title || 'no-title available',
-      description: articles.description || 'no-description available',
-      image: articles.image || '/not-found.jpg',
-      alt: articles.alt || 'no alter data available',
-      ogImage: articles.ogImage || '/not-found.jpg',
-      date: articles.date || 'not-date-available',
+      title: articles.title || "no-title available",
+      description: articles.description || "no-description available",
+      image: articles.image || "/not-found.jpg",
+      alt: articles.alt || "no alter data available",
+      ogImage: articles.ogImage || "/not-found.jpg",
+      date: articles.date || "not-date-available",
       tags: articles.tags || [],
       published: articles.published || false,
     }
@@ -21,12 +21,12 @@ const formattedData = computed(() => {
 })
 
 useHead({
-  title: 'Home',
+  title: "Home",
   meta: [
     {
-      name: 'description',
+      name: "description",
       content:
-        'Welcome To My Blog Site. Get Web Development, Javascript, Typescript, NodeJs, Vue, and Nuxt, Related Articles, Tips, Learning resources and more.',
+        "Welcome To My Blog Site. Get Web Development, Javascript, Typescript, NodeJs, Vue, and Nuxt, Related Articles, Tips, Learning resources and more.",
     },
   ],
 })

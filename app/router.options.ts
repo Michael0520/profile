@@ -1,4 +1,4 @@
-import type { RouterConfig } from '@nuxt/schema'
+import type { RouterConfig } from "@nuxt/schema"
 
 // https://router.vuejs.org/api/#routeroptions
 export default <RouterConfig>{
@@ -10,7 +10,7 @@ export default <RouterConfig>{
       return {
         el: to.hash,
         top: 100,
-        behavior: 'smooth',
+        behavior: "smooth",
       }
     }
 
@@ -21,7 +21,7 @@ export default <RouterConfig>{
       return {
         left: 0,
         top: 0,
-        behavior: 'smooth',
+        behavior: "smooth",
       }
     }
 

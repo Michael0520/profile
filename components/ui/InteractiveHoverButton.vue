@@ -41,7 +41,7 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from '~/utils/helper'
+import { cn } from "~/utils/helper"
 
 interface Props {
   text?: string
@@ -49,9 +49,9 @@ interface Props {
 }
 const props = withDefaults(defineProps<Props>(), {
   text: "Button",
-});
+})
 
-const buttonRef = ref<HTMLButtonElement>();
+const buttonRef = ref<HTMLButtonElement>()
 </script>
 
 <style></style>

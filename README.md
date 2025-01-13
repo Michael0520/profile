@@ -1,4 +1,3 @@
-
 <h1 align="center">Nuxt Blog A Personal Blog Site</h1>
 
 ### Built with

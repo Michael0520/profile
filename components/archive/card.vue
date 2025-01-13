@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import InteractiveHoverButton from '~/components/ui/InteractiveHoverButton.vue'
+import InteractiveHoverButton from "~/components/ui/InteractiveHoverButton.vue"
 interface Props {
   path?: string
   title?: string
@@ -13,13 +13,13 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  path: '/',
-  title: 'no-title',
-  date: 'no-date',
-  description: 'no-description',
-  image: '/blogs-img/blog.jpg',
-  alt: 'no-alt',
-  ogImage: '/blogs-img/blog.jpg',
+  path: "/",
+  title: "no-title",
+  date: "no-date",
+  description: "no-description",
+  image: "/blogs-img/blog.jpg",
+  alt: "no-alt",
+  ogImage: "/blogs-img/blog.jpg",
   tags: () => [],
   published: false,
 })

@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import { aboutPage, footerData, navbarData, socialLinks } from '~/data/index'
+import { aboutPage, footerData, navbarData, socialLinks } from "~/data/index"
 
 useHead({
-  title: 'About',
+  title: "About",
   meta: [
     {
-      name: 'description',
+      name: "description",
       content: footerData.aboutAuthor,
     },
   ],
 })
 
-defineOgImageComponent('About', {
-  headline: 'Greetings 👋',
+defineOgImageComponent("About", {
+  headline: "Greetings 👋",
   title: navbarData.homeTitle,
-  description: 'Dive into web development with me and learn Js, Ts, Vue, Nuxt, Docker, k8s',
-  link: '/logo.jpg',
+  description: "Dive into web development with me and learn Js, Ts, Vue, Nuxt, Docker, k8s",
+  link: "/logo.jpg",
 })
 </script>
 

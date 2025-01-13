@@ -24,17 +24,17 @@ published: true
 Example 1:
 
 ```javascript
-Input: 
-Output: 
-Explanation: 
+Input:
+Output:
+Explanation:
 ```
 
 Example 2:
 
 ```javascript
-Input: 
-Output: 
-Explanation: 
+Input:
+Output:
+Explanation:
 ```
 
 ### 限制條件
@@ -57,19 +57,19 @@ Explanation:
 ```mermaid
 stateDiagram-v2
     [*] --> INIT
-    
+
     state INIT {
         [*] --> 初始狀態
     }
-    
+
     INIT --> PROCESSING
-    
+
     state PROCESSING {
         [*] --> 處理步驟1
         處理步驟1 --> 處理步驟2
         處理步驟2 --> 處理步驟3
     }
-    
+
     PROCESSING --> COMPLETE
     COMPLETE --> [*]
 ```
@@ -77,9 +77,11 @@ stateDiagram-v2
 ## 狀態說明
 
 1. **INIT**: 初始化狀態
+
    - [說明初始化做了什麼]
 
 2. **PROCESSING**: 主要處理邏輯
+
    - [說明處理步驟]
 
 3. **COMPLETE**: 完成狀態

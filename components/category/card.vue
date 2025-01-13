@@ -5,22 +5,22 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  title: 'No title available',
+  title: "No title available",
   count: 0,
 })
 
 // some random color for tags
 const color = [
-  '#dc2626',
-  '#d97706',
-  '#65a30d',
-  '#059669',
-  '#0891b2',
-  '#0284c7',
-  '#4f46e5',
-  '#7c3aed',
-  '#c026d3',
-  '#db2777',
+  "#dc2626",
+  "#d97706",
+  "#65a30d",
+  "#059669",
+  "#0891b2",
+  "#0284c7",
+  "#4f46e5",
+  "#7c3aed",
+  "#c026d3",
+  "#db2777",
 ]
 
 // get a random number

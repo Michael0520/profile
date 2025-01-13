@@ -9,11 +9,11 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  title: 'no-title',
-  image: '#',
-  alt: 'no-img',
-  description: 'no description',
-  date: 'no-date',
+  title: "no-title",
+  image: "#",
+  alt: "no-img",
+  description: "no description",
+  date: "no-date",
   tags: () => [],
 })
 </script>
@@ -21,7 +21,7 @@ withDefaults(defineProps<Props>(), {
 <template>
   <header>
     <h1 class="text-xl dark:text-zinc-300 md:text-3xl lg:text-4xl my-7 font-bold text-left">
-      {{ title || '' }}
+      {{ title || "" }}
     </h1>
     <NuxtImg
       :src="image || ''"
@@ -38,7 +38,7 @@ withDefaults(defineProps<Props>(), {
       <div class="md:flex text-black dark:text-zinc-300 content-center gap-8 text-xs sm:text-sm">
         <div class="flex items-center font-semibold">
           <LogoDate />
-          <p>{{ date || '' }}</p>
+          <p>{{ date || "" }}</p>
         </div>
         <div class="flex items-center gap-2 flex-wrap my-5">
           <LogoTag />

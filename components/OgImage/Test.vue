@@ -7,10 +7,10 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  title: 'title',
-  description: 'description',
-  headline: 'headline',
-  link: '',
+  title: "title",
+  description: "description",
+  headline: "headline",
+  link: "",
 })
 
 const formattedTitle = computed(() =>
@@ -20,8 +20,8 @@ const formattedDescription = computed(() =>
   props.description.length > 100 ? `${props.description}...` : props.description,
 )
 const formattedLink = computed(() => {
-  if (props.link.endsWith('jpg') || props.link.endsWith('png')) return props.link
-  else return '/blogs-img/blog.jpg'
+  if (props.link.endsWith("jpg") || props.link.endsWith("png")) return props.link
+  else return "/blogs-img/blog.jpg"
 })
 </script>
 

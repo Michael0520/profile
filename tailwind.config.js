@@ -1,5 +1,5 @@
-import animate from "tailwindcss-animate";
-import { setupInspiraUI } from "@inspira-ui/plugins";
+import animate from "tailwindcss-animate"
+import { setupInspiraUI } from "@inspira-ui/plugins"
 
 export default {
   darkMode: "selector",
@@ -92,10 +92,10 @@ export default {
         },
       },
       borderRadius: {
-        xl: '1rem',
-        lg: '0.5rem',
-        md: '0.375rem',
-        sm: '0.25rem',
+        xl: "1rem",
+        lg: "0.5rem",
+        md: "0.375rem",
+        sm: "0.25rem",
       },
       keyframes: {
         "accordion-down": {
@@ -124,5 +124,10 @@ export default {
     },
   },
 
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms'),animate, setupInspiraUI],
-};
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    animate,
+    setupInspiraUI,
+  ],
+}

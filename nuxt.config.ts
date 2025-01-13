@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content',
     'nuxt-og-image',
+    '@vueuse/motion/nuxt',
     '@nuxtjs/robots',
     '@nuxtjs/sitemap',
     '@nuxtjs/color-mode',
@@ -65,4 +66,5 @@ export default defineNuxtConfig({
       theme: 'dracula',
     },
   },
+  extends: ["shadcn-docs-nuxt"],
 })

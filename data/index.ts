@@ -102,5 +102,5 @@ export const siteMetaData = [
 
 export const copyright = {
   year: new Date().getFullYear(),
-  company: 'Ming Tech Software, Inc'
+  company: '@michaello.dev'
 }

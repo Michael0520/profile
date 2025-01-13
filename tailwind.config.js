@@ -1,5 +1,7 @@
 import animate from "tailwindcss-animate"
 import { setupInspiraUI } from "@inspira-ui/plugins"
+import typography from '@tailwindcss/typography'
+import forms from '@tailwindcss/forms'
 
 export default {
   darkMode: "selector",
@@ -125,8 +127,8 @@ export default {
   },
 
   plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/forms"),
+    typography,
+    forms,
     animate,
     setupInspiraUI,
   ],

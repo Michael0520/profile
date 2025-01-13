@@ -67,5 +67,18 @@ export default defineNuxtConfig({
       theme: "dracula",
     },
   },
-  extends: ["shadcn-docs-nuxt"],
+
+  ssr: true,
+
+  ogImage: {
+    enabled: false,
+    defaults: {
+      width: 1200,
+      height: 630,
+      fonts: [
+        'Roboto:400',
+        'Roboto:700'
+      ]
+    },
+  },
 })

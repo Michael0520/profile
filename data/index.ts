@@ -50,7 +50,7 @@ export const seoData = {
 
 export const socialLinks = {
   githubLink: 'https://github.com/Michael0520',
-  instagramLink: 'https://www.instagram.com/michael0520/',
+  instagramLink: 'https://www.instagram.com/michaello.dev',
   twitterLink: 'https://twitter.com/MichaelLo860520',
   ghostWebSiteLink: 'https://michael-lo.ghost.io/',
 }

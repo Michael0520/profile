@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import InteractiveHoverButton from '~/components/ui/InteractiveHoverButton.vue'
 interface Props {
   path?: string
   title?: string
@@ -63,8 +64,7 @@ withDefaults(defineProps<Props>(), {
           </div>
         </div>
         <div class="flex group-hover:underline text-sky-700 dark:text-sky-400 items-center pt-2">
-          <p>Read More</p>
-          <LogoArrow />
+          <InteractiveHoverButton class="w-44" text="Read More" />
         </div>
       </div>
     </NuxtLink>

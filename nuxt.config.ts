@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@formkit/auto-animate",
     "@stefanobartoletti/nuxt-social-share",
+    '@nuxt/test-utils/module'
   ],
 
   app: {

@@ -41,7 +41,7 @@ export const seoData = {
   description: `Hi I am Michael Lo. A Software Engineer in Taiwan, with over 2.5+ years experience in software development.`,
   twitterDescription: `Ming's Blog, where I play around with Nuxt, Vue, and more and showcase my blog, resources, etc.`,
   image: "https://michael-lo.ghost.io/content/images/2025/01/white-ig-logo.svg",
-  mySite: "https://michael-lo.ghost.io/",
+  mySite: "https://michaello.me",
   twitterHandle: "@MichaelLo860520",
   mailAddress: "michael860520@gmail.com",
 }

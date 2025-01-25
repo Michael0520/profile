@@ -1,6 +1,6 @@
 ---
 title: '[Easy] 232. Implement Queue using Stacks'
-date: '2025-01-21'
+date: '2025-01-26'
 description: 'In this blog I will share a solution to the Implement Queue using Stacks problem'
 image: /blogs-img/leetcode-grind-75.png
 alt: Implement Queue using Stacks solution
@@ -9,9 +9,44 @@ tags: ['leetcode', 'javascript']
 published: true
 ---
 
+# 232. Implement Queue using Stacks
+
 ## 題目描述
 
-使用兩個堆疊（Stack）來實現先進先出（FIFO）隊列（Queue）。
+使用兩個堆疊（Stack）來實現先進先出（FIFO）佇列（Queue）。
+
+## 範例
+
+```bash
+MyQueue queue = new MyQueue();
+queue.push(1);          // queue is: [1]
+queue.push(2);          // queue is: [1, 2]
+queue.peek();           // return 1
+queue.pop();            // return 1, queue is: [2]
+queue.empty();          // return false
+```
+
+## 解題思路
+
+1. **基本概念**：
+   - 使用兩個堆疊來模擬佇列
+   - 一個用於新增元素（輸入堆疊）
+   - 一個用於取出元素（輸出堆疊）
+
+2. **解題步驟**：
+   - 新增元素時，直接放入輸入堆疊
+   - 取出元素時，如果輸出堆疊為空，將輸入堆疊的元素全部轉移到輸出堆疊
+   - 轉移過程會自動反轉元素順序，實現先進先出
+
+## 複雜度
+
+- 時間複雜度：
+  - push: O(1)
+  - pop: 平攤 O(1)
+  - peek: 平攤 O(1)
+  - empty: O(1)
+
+- 空間複雜度：O(n)，n 為佇列中的元素數量
 
 ## 什麼是 Stack 和 Queue？
 
@@ -31,28 +66,6 @@ published: true
    queue.push(1);    // [1]
    queue.push(2);    // [1, 2]
    queue.pop();      // 返回 1，剩下 [2]
-   ```
-
-## 解題思路
-
-1. **使用兩個堆疊**：
-   ```typescript
-   class MyQueue {
-       private inputStack: number[] = [];   // 處理新增元素
-       private outputStack: number[] = [];  // 處理移除元素
-   }
-   ```
-
-2. **元素轉移過程**：
-   ```typescript
-   // 假設 inputStack = [3, 2, 1]
-   // 需要 pop 時，將元素倒入 outputStack
-   
-   inputStack:  [3, 2, 1]  =>  []
-                   ⬇
-   outputStack:    []      =>  [1, 2, 3]
-   
-   // 這樣就能以正確順序取出元素
    ```
 
 ## 程式碼實作

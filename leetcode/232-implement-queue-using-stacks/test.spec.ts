@@ -3,7 +3,7 @@ import { createQueue } from './solution';
 
 describe('232. Implement Queue using Stacks', () => {
     it('should handle basic operations', () => {
-        const queue = createQueue();
+        const queue = createQueue<number>();
         queue.push(1);
         queue.push(2);
         expect(queue.peek()).toBe(1);
@@ -12,7 +12,7 @@ describe('232. Implement Queue using Stacks', () => {
     });
 
     it('should handle multiple push and pop operations', () => {
-        const queue = createQueue();
+        const queue = createQueue<number>();
         queue.push(1);
         queue.push(2);
         queue.push(3);
@@ -25,15 +25,23 @@ describe('232. Implement Queue using Stacks', () => {
     });
 
     it('should handle empty queue', () => {
-        const queue = createQueue();
+        const queue = createQueue<number>();
         expect(queue.empty()).toBe(true);
     });
 
     it('should handle peek after pop', () => {
-        const queue = createQueue();
+        const queue = createQueue<number>();
         queue.push(1);
         queue.push(2);
         expect(queue.pop()).toBe(1);
         expect(queue.peek()).toBe(2);
+    });
+
+    it('should handle generic types', () => {
+        const queue = createQueue<string>();
+        queue.push('a');
+        queue.push('b');
+        expect(queue.pop()).toBe('a');
+        expect(queue.peek()).toBe('b');
     });
 });
